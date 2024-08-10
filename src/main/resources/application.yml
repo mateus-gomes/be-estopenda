@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: estopenda
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/estopenda
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
