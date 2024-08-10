@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16.4-alpine
+    container_name: db_postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: estopenda
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_estopenda:/var/lib/postgresql/data
+
+volumes:
+  db_estopenda:
+    name: db_estopenda
